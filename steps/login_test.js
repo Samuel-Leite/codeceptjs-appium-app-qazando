@@ -25,7 +25,25 @@ After(() => {
 Scenario('Login with success', ( {login_page, home_page} ) => {
     login_page.doLogin('teste@teste.com', '123456')
     home_page.checkLoginSuccess()
-});
+
+    // scroll na tela / rolar a tel
+    I.touchPerform([
+        {
+            // pressionar a tela
+            action: 'longPress',
+            // posicao que vai clicar
+            options: {x:300,  y: 1100}
+        },
+        {
+            action: 'moveTo',
+            options: {x:300,  y: 250}
+        },
+        { action: 'release'}
+    ])
+
+    I.wait(5)
+
+}).tag('@Login_sucesso');
 
 Scenario('Login with error',  ( {login_page} ) => {
     login_page.doLogin('xteste@teste.com', '123456')

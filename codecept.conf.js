@@ -2,6 +2,7 @@ const server = require("./server/server")
 
 exports.config = {
   output: './output',
+  // automatizar app
   helpers: {
     Appium: {
       platform: 'Android',
@@ -14,6 +15,20 @@ exports.config = {
       }
     }
   },
+
+  // automatizar navegador
+  // helpers: {
+  //   Appium: {
+  //     platform: 'Android',
+  //     desiredCapabilities: {
+  //       deviceName: 'pixel2',
+  //       plataformVersion: '9',
+  //       automationName: 'UiAutomator2',
+  //       browserName: 'Chrome'
+  //     }
+  //   }
+  // },
+
   include: {
     I: './steps_file.js',
     login_page: './pages/login_page.js',
