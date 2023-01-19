@@ -1,9 +1,7 @@
-Feature('Search Google');
+Feature('Search GFT');
 
-Scenario('Search QAzando',  ({ I }) => {
-    I.amOnPage('https://www.google.com')
-    I.fillField('.gLFyf', 'QAzando')
-    I.waitForElement('.sbic', 5)
-    I.click('.sbic')
-    I.see('www.qazando.com.br')
+Scenario('Search GFT',  ({ I }) => {
+    I.amOnPage('https://www.gft.com/br/pt')
+    I.waitForElement('#menu', 5)
+    I.click('#menu')
 });
