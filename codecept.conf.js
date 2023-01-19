@@ -43,10 +43,11 @@ exports.config = {
     await server.stop();
   },
   hooks: [],
-  //gherkin: {
-  //  features: './features/*.feature',
-  //  steps: ['./step_definitions/steps.js']
-  //},
+  // rodar testes utilizando BDD
+  gherkin: {
+   features: './features/*.feature',
+   steps: ['./step_definitions/steps.js']
+  },
   plugins: {
     screenshotOnFail: {
       enabled: true
@@ -76,5 +77,6 @@ exports.config = {
     }
   ],
   name: 'qazando-automation-mobile',
-  tests: './steps/*_test.js'
+  // rodar testes das pasta steps
+  // tests: './steps/*_test.js'
 }
