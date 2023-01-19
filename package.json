@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "android": "codeceptjs run --reporter mochawesome -c codecept.conf.js --override '{\"helpers\": {\"Appium\": { \"platform\": \"Android\", \"app\": \"/Users/qazando/Documents/app-release.apk\", \"desiredCapabilities\": { \"appPackage\": \"com.qazandoapp\", \"appActivity\": \"MainActivity\", \"deviceName\": \"pixel\", \"platformVersion\": \"9\" }}}} ' ",
+    "androidTest": "PLATFORM=Android APP='C:/Users/slle/OneDrive - GFT Technologies SE/Desktop/Samuel Leite/AutomationProject/Mobile/qazando/app-release.apk' DEVICE=android_device VERSION=9 PACKAGE=com.qazandoapp ACTIVITY=MainActivity npx codeceptjs run --steps",
     "test": "npx codeceptjs run --steps"
   },
   "author": "",

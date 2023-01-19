@@ -2,6 +2,7 @@ const server = require("./server/server")
 
 exports.config = {
   output: './output',
+
   // automatizar app
   helpers: {
     Appium: {
@@ -17,17 +18,17 @@ exports.config = {
   },
 
   // automatizar navegador
-  // helpers: {
-  //   Appium: {
-  //     platform: 'Android',
-  //     desiredCapabilities: {
-  //       deviceName: 'pixel2',
-  //       plataformVersion: '9',
-  //       automationName: 'UiAutomator2',
-  //       browserName: 'Chrome'
-  //     }
-  //   }
-  // },
+  helpers: {
+    Appium: {
+      platform: 'Android',
+      desiredCapabilities: {
+        deviceName: 'pixel2',
+        plataformVersion: '9',
+        automationName: 'UiAutomator2',
+        browserName: 'Chrome'
+      }
+    }
+  },
 
   include: {
     I: './steps_file.js',
@@ -44,10 +45,10 @@ exports.config = {
   },
   hooks: [],
   // rodar testes utilizando BDD
-  gherkin: {
-   features: './features/*.feature',
-   steps: ['./step_definitions/steps.js']
-  },
+  // gherkin: {
+  //  features: './features/*.feature',
+  //  steps: ['./step_definitions/steps.js']
+  // },
   plugins: {
     screenshotOnFail: {
       enabled: true
@@ -78,5 +79,5 @@ exports.config = {
   ],
   name: 'qazando-automation-mobile',
   // rodar testes das pasta steps
-  // tests: './steps/*_test.js'
+  tests: './steps/search_google_test.js'
 }
