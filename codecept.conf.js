@@ -7,7 +7,7 @@ exports.config = {
   helpers: {
     Appium: {
       platform: 'Android',
-      app: 'C:/Users/slle/OneDrive - GFT Technologies SE/Desktop/Samuel Leite/AutomationProject/Mobile/qazando/app-release.apk',
+      app: 'C:/Users/slle/OneDrive - GFT Technologies SE/Desktop/Samuel Leite/AutomationProject/Mobile/app/app-release.apk',
       desiredCapabilities: {
         appPackage: 'com.qazandoapp',
         appActivity: 'MainActivity',
